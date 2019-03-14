@@ -13,5 +13,9 @@
 
 int main(void) {
 	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	accederAComponentes();
 	return EXIT_SUCCESS;
 }
+
+
+
