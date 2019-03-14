@@ -11,8 +11,10 @@
 	struct Point1 punto1;
 	// Para llamar a Point2 se tendrá que hacer así:
 	Point2 punto2;
-	// Para llamar a Point se tendrá que hacer así:
-	Point p;
+
+	// Para llamar a Recta, una estructura encadenada a point:
+	Rect rect = { {5,6} , {3,2} };
+
 
 void accederAComponentes(){
 
@@ -21,6 +23,7 @@ void accederAComponentes(){
 	// En este método, fuera de él la variable seguirá igual
 	punto1.x = 0;
 	punto1.y = 1;
+
 
 	// Se duplica la variable punto2 a punto3
 	Point2 punto3 = punto2;
@@ -49,7 +52,8 @@ void accederAComponentes(){
 
 	struct Point1 punto6 = {5,7};
 
-
+	rect.p1.x = 5;
+	rect.p2.x = 6;
 
 }
 
