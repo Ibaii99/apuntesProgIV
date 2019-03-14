@@ -13,8 +13,10 @@
 
 int main(void) {
 	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
-	accederAComponentes();
+//	accederAComponentes();
+	punteros();
 	return EXIT_SUCCESS;
+
 }
 
 
