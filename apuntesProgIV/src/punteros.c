@@ -8,6 +8,7 @@
 // Los punteros solo se liberan con free.
 // Los elementos estáticos se eliminan al salir de la función.
 
+
 int a = 7;
 int b = 6;
 
@@ -51,4 +52,5 @@ void operar(int *c, int *d){
 	a = *c;
 	b-= *d;
 }
+
 

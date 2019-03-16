@@ -5,6 +5,7 @@
  *      Author: ibai
  */
 #include  "estructuras.h"
+
 // #include "../nombreCarp/nombreArch.h" --> Saldriamos de la carpeta src y avanzariamos hasta "nombreCarp" y luego al nombre del archivo
 
 	// Para llamar a Point1 se tendrá que hacer así:
