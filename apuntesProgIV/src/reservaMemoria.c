@@ -25,10 +25,9 @@ void reservaMem(){
 	int *x; // C reserva automaticamente un espacio a la variable
 	Point2 *punto; // C reserva automaticamente un espacio a la variable
 
+
 	// Liberación de memoria estática
 	// La memoria estática se borra al finalizar el método, y no sera posible volver a accerder a la información fuera de el
-
-
 
 	// Liberación de memoria dinámica
 	// SOLO se liberan punteros
@@ -38,11 +37,44 @@ void reservaMem(){
 	free(pp);
 	free(p);
 
-	// Se establecen a NULL los punteros
-
+	// Se establecen a NULL los punteros despues de liberarlos
 	punt = NULL;
 	pp = NULL;
 	p = NULL;
+
+
+
+	//	 Podemos crear arrays de tamaño dinámico mediante el uso de punteros
+	//	 Para ello, multiplicamos el valor del sizeof por el número de bloques
+	//	 que queremos reservar.
+	int *array; //declaramos un puntero a un entero
+	array = malloc(3 * sizeof(int)); //  Se reservan 3 bloques de enteros
+	array[0] = 1;	// Primer bloque de entero
+	array[1] = 5;	// Segundo bloque de entero
+	array[2] = 4;	// Tercer bloque de entero
+	free(array);
+	array = NULL;
+
+
+
+	//En general, p+n, incrementa p para apuntar a n elementos después del actual.
+	int array1[5];
+	int *array2;
+	array2 = &array1[1]; // hacemos que apunte a la segunda posición
+	*(array2 - 1) = 3; //asignar 3 a la primera posición
+	*array2 = 2; //asignar 2 a la segunda posición
+	*(array2 + 1) = 10; //asignar 10 a la tercera posición
+	*(array2 + 2) = 4; //asignar 4 a la cuarta posición
+	*(array2 + 3) = 5; //asignar 5 a la quinta posición
+	int resultadoSuma = (*(array2) + 3) + (*(array2) - 1); // suma = 5 + 3 = 8
+
+	// 14 - 35
+
+
+
+
+
+
 
 }
 
