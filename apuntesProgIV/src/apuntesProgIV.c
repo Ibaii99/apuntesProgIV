@@ -12,7 +12,7 @@
 #include <stdlib.h>
 
 int main(void) {
-	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	puts("!!!Apuntes!!!"); /* prints !!!Hello World!!! */
 	accederAComponentes();
 	punteros();
 	return EXIT_SUCCESS;
