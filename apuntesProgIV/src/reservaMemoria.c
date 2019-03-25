@@ -15,10 +15,15 @@ void reservaMem(){
 	p = malloc(3); // Se reservan 3 bytes --> 24 bits
 
 	int *pp;
-	pp = malloc(sizeof(int)); //reservamos 4 bytes. 32 bits que es el tamaño de un entero
+	pp = (int*) malloc(sizeof(int)); //reservamos 4 bytes. 32 bits que es el tamaño de un entero
 
 	Point2 *punt;
 	punt = (Point2*) malloc(sizeof(Point2)); // reservamos el espacio suficiente para que toda la estructura pueda estar en memoria
+
+	Point *pPoint = (Point*) malloc(5 * sizeof(Point)); // espacio para un array de 5 elementos
+
+	(pPoint + 1)->x = 4; // avanzará 8 bytes
+
 
 	// Reserva estática de memoria
 
@@ -68,7 +73,7 @@ void reservaMem(){
 	*(array2 + 3) = 5; //asignar 5 a la quinta posición
 	int resultadoSuma = (*(array2) + 3) + (*(array2) - 1); // suma = 5 + 3 = 8
 
-	// 14 - 35
+
 
 
 

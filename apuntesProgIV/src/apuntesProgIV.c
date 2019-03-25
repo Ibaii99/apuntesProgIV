@@ -15,6 +15,9 @@ int main(void) {
 	puts("!!!Apuntes!!!"); /* prints !!!Hello World!!! */
 	accederAComponentes();
 	punteros();
+	Strings();
+	crearFichero();
+	leerFichero();
 	return EXIT_SUCCESS;
 
 }

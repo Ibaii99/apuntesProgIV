@@ -9,23 +9,24 @@
 #include <stdlib.h>
 
 void crearFichero(){
-	FILE* archivo= fopen("prueba.txt",'w');
-	fprintf(archivo, "Escribiendo 10 nums: \n");
+	FILE* archivo= fopen("prueba.txt","w");
+	fprintf(archivo, "Escribiendo 10 nums: \n"); // con fprintf escribo en el fichero
 	for(int e =0; e<10; e++ ){
-		fprintf(archivo, ("%i \n",e));
+		fprintf(archivo, "%i \n",e+1);
 	}
 	fclose(archivo);
 }
 
 void leerFichero(){
-	FILE* archivo= fopen("prueba.txt",'r');
+	FILE* archivo= fopen("prueba.txt","r");
 
 	char caracter;
 	int numLinea=0;
 
-	while( (caracter=getc(archivo)) != EOF){
+	while( (caracter=fgetc(archivo)) != EOF){	// leemos el fichero caracter a caracter
 		if(caracter=='\n') numLinea++;
-		printf("%s", caracter);
+		printf("%c", caracter);
 	}
+	printf("Fichero con tamaño de %i lineas", numLinea);
 	fclose((archivo));
 }
