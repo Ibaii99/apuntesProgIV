@@ -5,6 +5,8 @@
  *      Author: ibai
  */
 #include <string.h>
+#include "estructuras.h"
+#include <stdio.h>
 
 void Strings(){
 	// un estrings es una cadena de chars
@@ -84,7 +86,24 @@ void Strings(){
 
 
 }
+void recorrer_array_estruct(){
+	Point *p = (Point*) malloc((3*sizeof(Point))+1);
+		int a = 5;
 
+		(*p).x = 3333;
+		(*p).y = 3333;
+
+		(*(p+1)).x = 444;
+		(*(p+1)).y = 444;
+
+		(*(p+2)).x = 555;
+		(*(p+2)).y = 555;
+
+		for(int e = 0; e<a; e++){
+			printf("Punto%i  %i %i\n", e+1, (*(p+e)).x, (*(p+e)).y);
+			fflush(stdout);
+		}
+}
 void suma(int nums[], int tamanyo){
 	while(tamanyo){
 		nums[tamanyo-1]+= nums[tamanyo];

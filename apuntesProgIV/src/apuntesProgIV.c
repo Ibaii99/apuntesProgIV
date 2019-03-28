@@ -13,11 +13,15 @@
 
 int main(void) {
 	puts("!!!Apuntes!!!"); /* prints !!!Hello World!!! */
-	accederAComponentes();
+	/*accederAComponentes();
 	punteros();
 	Strings();
 	crearFichero();
-	leerFichero();
+	leerFichero();*/
+
+
+
+
 	return EXIT_SUCCESS;
 
 }
