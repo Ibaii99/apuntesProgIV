@@ -9,6 +9,13 @@
 #include <stdio.h>
 
 void Strings(){
+	// Si tienes una estructura y hay que agrandar el tamaño
+	int *a,*e;
+	a = malloc(sizeof(int)*4);
+	e = malloc(sizeof(int)*6);
+	a = e;
+	// para cambiar el array de a y que sea de tamaño 6
+
 	// un estrings es una cadena de chars
 	// estÃ¡tico
 	char nombre[10];
